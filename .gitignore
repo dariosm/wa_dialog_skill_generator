@@ -1,1 +1,5 @@
-parser_files/*
+parser_files/**
+**/.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
