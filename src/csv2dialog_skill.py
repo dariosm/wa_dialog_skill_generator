@@ -3,10 +3,11 @@ import json
 import re
 from typing import Dict, List, Optional
 import sys
+from os.path import dirname, join
 
 DEFAULT_DIALOG_SILL_NAME: str = "Voluntarito"
 DEFAULT_WELCOME_MSG: str = "Bienvenido a Voluntarito!"
-DEFAULT_LINE_BREAK: str = "<br>"
+DEFAULT_LINE_BREAK: str = "\n"
 
 
 def clean_str(s: str) -> str:
@@ -104,7 +105,8 @@ def main(input_file_name: str, dialog_skill_name: str, output_file_name: Optiona
 
     dialog_skill_contents: Dict = parse_lines(q_and_a, dialog_skill_name)
     if not output_file_name:
-        output_file_name = f"{input_file_name}_dialog_skill.json"
+        input_file_path = dirname(input_file_name)
+        output_file_name = join(input_file_path, f"{input_file_name}_dialog_skill.json")
 
     with open(output_file_name, "w") as out:
         json.dump(dialog_skill_contents, out, indent=2, ensure_ascii=False)
