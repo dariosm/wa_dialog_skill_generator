@@ -1,1 +1,0 @@
-(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[124],{yKh8:function(t,e,n){"use strict";n.r(e);var a=n("q1tI"),i=n.n(a),l=i.a.createElement;e.default=t=>l(i.a.Fragment,null,l("noscript",null,l("iframe",{src:"https://www.googletagmanager.com/ns.html?id=GTM-PG4452Q",height:"0",width:"0",style:{display:"none",visibility:"hidden"},title:"googletagmanager"})))}}]);
